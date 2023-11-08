@@ -1,0 +1,22 @@
+class Magic:
+    def __init__(self, n):
+        self.n = n
+    
+    def __set_name__(self, owner, name):
+        self.whoami = name
+        self.whereami = owner.__name__
+        try: 
+            owner.magic += self.n
+        except AttributeError:
+            owner.magic = self.n
+    
+    def __getattr__(self, name):
+        if name.startswith("magic_"):
+            return self.n * int(name[6:])
+        
+    def __setattr__(self, name, value):
+        if name in ("n", "whoami", "whereami") and getattr(self, name) == None:
+            object.__setattr__(self, name, value)
+        else:
+            raise Exception
+        
