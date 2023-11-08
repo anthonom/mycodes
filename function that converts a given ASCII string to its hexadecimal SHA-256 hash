@@ -1,0 +1,5 @@
+def to_sha256(s):
+
+    import hashlib
+
+    return hashlib.sha256(s.encode()).hexdigest()
