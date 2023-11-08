@@ -1,0 +1,39 @@
+def up_array(arr):
+    
+    a = ""
+    if arr == []:
+        return None
+    for i in arr:
+        if i < 0:
+            return None
+        if i > 9:
+            return None
+    sbang = "".join(map(str, arr))
+    if sbang.isdigit():
+        a = "0" + str(1 + (int(sbang)))
+    b = [int(x) for x in str(a)]
+
+    if sbang[0] == "0" and len(sbang) > 2:
+        return b
+    
+    else:
+        a = 1 + (int(sbang))
+    c = [int(x) for x in str(a)]
+    return c
+            
+    
+    
+    
+    
+
+
+
+    
+    
+        
+        
+    
+    
+    
+        
+        
