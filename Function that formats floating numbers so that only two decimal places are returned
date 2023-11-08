@@ -1,3 +1,0 @@
-n = 2
-    result = int(number * 10 ** n) / 10 ** n
-    return result
