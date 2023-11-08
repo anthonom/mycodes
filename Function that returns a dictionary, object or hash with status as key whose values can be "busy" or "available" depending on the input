@@ -1,0 +1,3 @@
+def get_status(busy):
+    status = "busy" if busy else "available"
+    return {"status" : status}
