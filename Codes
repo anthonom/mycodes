@@ -1,0 +1,13 @@
+def most_frequent_item_count(collection):
+    from collections import Counter
+    if collection == []:
+        return 0
+    else:
+        occurence_count = Counter(collection)
+    res = occurence_count.most_common(1)[0][0]
+    return collection.count(res)
+    print(res)
+
+
+
+
