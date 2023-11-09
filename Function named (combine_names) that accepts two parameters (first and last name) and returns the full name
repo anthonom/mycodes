@@ -1,0 +1,5 @@
+def combine_names(*names):
+
+    joined_string = ", ".join(names)
+    joined_string = joined_string.replace(',', '')
+    return joined_string
