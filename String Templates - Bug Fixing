@@ -1,0 +1,4 @@
+def build_string(*args):
+    
+    joined_string = ", ".join(args)
+    return "I like {}!".format (joined_string)
