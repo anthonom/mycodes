@@ -1,0 +1,6 @@
+def format_money(amount):
+    # your formatting code here
+    
+    formatted_float = "${:.2f}".format(amount)
+    return formatted_float
+    
