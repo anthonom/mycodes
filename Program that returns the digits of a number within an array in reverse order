@@ -1,0 +1,5 @@
+def digitize(n): 
+    a = str(n)
+    b = list(reversed(a))
+    return ([int(x) for x in b])
+    
